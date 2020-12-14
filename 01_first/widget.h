@@ -10,7 +10,7 @@ class Widget;
 class Widget : public QWidget
 {
     Q_OBJECT
-
+    //提交测试
 public:
     explicit Widget(QWidget *parent = 0);
     ~Widget();
