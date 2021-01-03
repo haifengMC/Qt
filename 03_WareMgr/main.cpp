@@ -1,5 +1,6 @@
-#include "waremgr.h"
 #include <QApplication>
+#include "waredata.h"
+#include "waremgr.h"
 
 int main(int argc, char *argv[])
 {

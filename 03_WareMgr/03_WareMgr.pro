@@ -25,10 +25,12 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        waremgr.cpp
+        waremgr.cpp \
+    waredata.cpp
 
 HEADERS += \
-        waremgr.h
+        waremgr.h \
+    waredata.h
 
 FORMS += \
         waremgr.ui
