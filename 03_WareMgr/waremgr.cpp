@@ -12,6 +12,7 @@ WareMgr::WareMgr(QWidget *parent) :
     ui(new Ui::WareMgr)
 {  
     ui->setupUi(this);
+    dataMgr.unserialze();
 
     //setStretchFactor(ui->lineEdit_2, 1);
     fillTextLable();
@@ -114,4 +115,9 @@ void WareMgr::on_treeView_doubleClicked(const QModelIndex &index)
         fillTableView();
         fillTextLable();
     }
+}
+
+void WareMgr::on_WareMgr_destroyed()
+{
+    dataMgr.serialize();
 }

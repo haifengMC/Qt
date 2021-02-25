@@ -40,6 +40,7 @@ private Q_SLOTS:
     void on_lineEdit_editingFinished();
     void on_pushButton_clicked();
     void on_treeView_doubleClicked(const QModelIndex &index);
+    void on_WareMgr_destroyed();
 };
 
 #endif // WAREMGR_H

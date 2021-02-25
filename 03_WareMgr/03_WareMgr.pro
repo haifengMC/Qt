@@ -23,14 +23,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 
+
 SOURCES += \
         main.cpp \
         waremgr.cpp \
-    waredata.cpp
+    waredata.cpp \
+    WareMgr.pb.cc
 
 HEADERS += \
         waremgr.h \
-    waredata.h
+    waredata.h \
+    WareMgr.pb.h
 
 FORMS += \
         waremgr.ui
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../../protobuf/bin32/release/ -llibprotobufd
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../../protobuf/bin32/debug/ -llibprotobufd
+
+INCLUDEPATH += $$PWD/../../protobuf/protobuf-master/src
+DEPENDPATH += $$PWD/../../protobuf/bin32/Debug
+LIBS += $$PWD/../../protobuf/bin32/debug/libprotobufd.lib

@@ -1,0 +1,14 @@
+syntax = "proto3";
+ 
+message WareItemProto
+{
+	string name = 1;
+	uint32 num = 2;
+} 
+ 
+message WareDataProto
+{
+	string name = 1;
+	repeated WareDataProto datas = 2;
+	repeated WareItemProto items = 3;
+} 
